@@ -1,0 +1,18 @@
+@import 'variables.scss';
+@import 'header.scss';
+@import 'days-container.scss';
+@import 'main.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
