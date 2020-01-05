@@ -26,7 +26,7 @@ const getMonday = (arr) => {
         } else {
             let date = currentDate + next;
            arr[i] = new Date(new Date().setDate(date));
-            counterNext++;
+            next++;
         }
     }
     showDate(week);
