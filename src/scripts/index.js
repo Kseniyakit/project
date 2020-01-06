@@ -11,8 +11,9 @@ const week = [
 const monthAndYear = document.querySelector('.header__datenow');
 
 const getMonday = (arr) => {
+   
+    const currentDay = new Date().getDay()-1;
     const currentDate = new Date().getDate();
-    const currentDay = new Date().getDay();
     let countDays = currentDay;
     let next = 1;
     for (let i = 0; i < arr.length; i++) {
@@ -99,13 +100,13 @@ function showWeek(arr){
        
         dayName.classList.add('day-name');
         let dayNum = arr[i].getDay();
+        if (dayNum ==1) dName = " ПН";
+        if (dayNum==2) dName = " ВТ";
+        if (dayNum==3) dName= " СР";
+        if (dayNum ==4) dName= " ЧТ";
+        if (dayNum==5) dName= " ПТ";
+        if (dayNum==6) dName = " СБ";
         if (dayNum ==0) dName = " ВС";
-        if (dayNum==1) dName = " ПН";
-        if (dayNum==2) dName= " ВТ";
-        if (dayNum ==3) dName= " СР";
-        if (dayNum==4) dName= " ЧТ";
-        if (dayNum==5) dName = " ПТ";
-        if (dayNum ==6) dName = " СБ";
         dayName.textContent = dName;
         oneDay.append(dayName);
 
