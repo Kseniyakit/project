@@ -22,6 +22,19 @@
         border-bottom: 1px solid $classicGrey;
         border-right: 1px solid $classicGrey;
     }
+    &__day_object{
+        font-size: 12px;
+        background-color: #0851f6;
+        color: #fff;
+       
+        width: 14%;
+        border-radius: 5px;
+        font-weight: 700;
+        padding: 4px;
+        position: absolute;
+        z-index: 1;
+        box-shadow: 3px 3px 5px 0 #b5bbc1;
+    }
 }
 .sidebar{
     height: 100%;
