@@ -1,66 +1,67 @@
 .main {
-    display: flex;
-}
-
-.calendar {
     width: 100%;
-    height: 100vh;
-    background-color: $white;
-    margin-top: 160px;
-
-    &__week-bar {
-        display: flex;
-    }
-
-    &__day-bar {
-        width: 100%;
-    }
-
-    &__hour-bar {
-        width: 100%;
-        height: 60px;
-        border-bottom: 1px solid $classicGrey;
-        border-right: 1px solid $classicGrey;
-    }
-    &__day_object{
+    position: relative;
+    top: 160px;
+    display: flex;
+    &__sidebar_time {
+        color: $textColorgrey;
         font-size: 12px;
-        background-color: #0851f6;
-        color: #fff;
-       
-        width: 14%;
-        border-radius: 5px;
-        font-weight: 700;
-        padding: 4px;
-        position: absolute;
-        z-index: 1;
-        box-shadow: 3px 3px 5px 0 #b5bbc1;
+    }
+    &__sidebar_timing {
+        width: 6%;
+        &_place {
+            height: 50px;
+            position: relative;
+            span {
+                position: absolute;
+                top: -8px;
+            }
+        }
+        &_place-bord {
+            width: 15px;
+            height: 1px;
+            background-color: $borderColor;
+            position: absolute;
+            right: 0;
+            top: -1px;
+        }
+    }
+    &__sidebar_days {
+        display: flex;
+        flex: 1;
+        &_line {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        &_hours {
+            height: 50px;
+            width: 100%;
+            border-bottom: 1px solid $borderColor;
+            border-left: 1px solid $borderColor;
+        }
     }
 }
-.sidebar{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-    background-color: $white;
-    font-size: 10px;
-    border-right: 1px solid #d5d5d5;
-    margin-top: 160px;
-    
-    &__hour{
-        top: -6px;
-        position: relative;
-        min-height: 60px;
-        padding-right: 8px;
-        text-align: right;
 
+.main__sidebar_day_object {
+    font-size: 12px;
+    background-color: #0851f6;
+    color: #fff;
+    height: 95%;
+    width: 93%;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 3px 3px 5px 0 #b5bbc1;
+    h7,
+    p {
+        margin: 0;
+        padding: 0;
     }
-    &__hour-text{
-        display: block;
-        position: relative;
-        color: $text-grey;
-    }
+}
 
-    &__no-display {
-        visibility: hidden;
-    }
+.main__sidebar_days_hours {
+    position: relative;
 }
