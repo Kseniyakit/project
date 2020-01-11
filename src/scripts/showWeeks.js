@@ -1,5 +1,6 @@
 import { week} from './currentWeek.js';
-
+import { showDate} from './currentWeek.js';
+import { showWeek} from './currentWeek.js';
 export const todayBtn = document.querySelector('.header__btn-day');
 export const todayWeekSwitcher = () => {
     getMonday(week);
